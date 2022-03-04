@@ -1,7 +1,7 @@
 import requests
 from flask import *
 from user_agent import *
-app = Flask(name)
+app = Flask(__name__)
 app.config["JSONIFY_PRETTYPRINT_REGULAR"]= True
 app.config["JSON_AS_ACSII"] = False
 @app.route("/")
@@ -54,5 +54,5 @@ def f():
   return jsonify(check=False, email= eml, Telegram="@JJJJzJJJ") 
 
 
-if name == "main":
+if __name__ == "__main__":
  app.run()
